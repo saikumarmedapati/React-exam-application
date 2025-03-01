@@ -1,0 +1,416 @@
+{
+  "questions": {
+    "RestApi_java": [
+      {
+        "id": 1,
+        "question": "What is REST?",
+        "options": [
+          "Representational State Transfer",
+          "Remote State Transfer",
+          "Representational System Transfer",
+          "Remote System Transfer"
+        ],
+        "answer": "Representational State Transfer"
+      },
+      {
+        "id": 2,
+        "question": "Which HTTP method is used to create a resource in REST?",
+        "options": ["GET", "POST", "PUT", "DELETE"],
+        "answer": "POST"
+      },
+      {
+        "id": 3,
+        "question": "What is the primary Java framework for building RESTful web services?",
+        "options": ["Spring MVC", "JAX-RS", "Hibernate", "JSF"],
+        "answer": "JAX-RS"
+      },
+      {
+        "id": 4,
+        "question": "Which annotation is used to map HTTP GET requests in Spring REST?",
+        "options": ["@GetMapping", "@RequestMapping", "@PostMapping", "@PutMapping"],
+        "answer": "@GetMapping"
+      },
+      {
+        "id": 5,
+        "question": "What does HATEOAS stand for in REST?",
+        "options": [
+          "Hypertext As The Engine Of Application State",
+          "Hypertext Application Transfer Of Application State",
+          "Hypertext As Transfer Engine Of Application State",
+          "Hypertext Application The Engine Of State"
+        ],
+        "answer": "Hypertext As The Engine Of Application State"
+      },
+      {
+        "id": 6,
+        "question": "Which HTTP status code represents a successful creation of a resource?",
+        "options": ["200 OK", "201 Created", "204 No Content", "202 Accepted"],
+        "answer": "201 Created"
+      },
+      {
+        "id": 7,
+        "question": "What is the default format for data exchange in RESTful services?",
+        "options": ["XML", "JSON", "HTML", "Plain Text"],
+        "answer": "JSON"
+      },
+      {
+        "id": 8,
+        "question": "Which Java library is commonly used for JSON processing in REST APIs?",
+        "options": ["Jackson", "JAXB", "DOM", "SAX"],
+        "answer": "Jackson"
+      },
+      {
+        "id": 9,
+        "question": "What is the purpose of @PathVariable annotation in Spring REST?",
+        "options": [
+          "To extract values from the URI path",
+          "To extract query parameters",
+          "To extract form data",
+          "To extract header values"
+        ],
+        "answer": "To extract values from the URI path"
+      },
+      {
+        "id": 10,
+        "question": "Which HTTP method is idempotent?",
+        "options": ["GET", "POST", "Both GET and POST", "Neither GET nor POST"],
+        "answer": "GET"
+      },
+      {
+        "id": 11,
+        "question": "What is the purpose of @RequestBody annotation in Spring REST?",
+        "options": [
+          "To bind request body to a method parameter",
+          "To bind request headers to a method parameter",
+          "To bind request path variables to a method parameter",
+          "To bind request query parameters to a method parameter"
+        ],
+        "answer": "To bind request body to a method parameter"
+      },
+      {
+        "id": 12,
+        "question": "Which of the following is NOT a REST constraint?",
+        "options": [
+          "Client-Server",
+          "Stateless",
+          "Cacheable",
+          "Object-Oriented"
+        ],
+        "answer": "Object-Oriented"
+      },
+      {
+        "id": 13,
+        "question": "What is the purpose of @RestController annotation in Spring?",
+        "options": [
+          "Combines @Controller and @ResponseBody",
+          "Combines @Controller and @RequestMapping",
+          "Combines @Service and @Repository",
+          "Combines @Component and @Bean"
+        ],
+        "answer": "Combines @Controller and @ResponseBody"
+      },
+      {
+        "id": 14,
+        "question": "Which Java API specification is used for creating RESTful web services?",
+        "options": ["JAX-RS", "JDBC", "JPA", "JNDI"],
+        "answer": "JAX-RS"
+      },
+      {
+        "id": 15,
+        "question": "What is the purpose of @Produces annotation in JAX-RS?",
+        "options": [
+          "Specifies the media type that the method can produce",
+          "Specifies the media type that the method can consume",
+          "Creates a new resource",
+          "Produces a response entity"
+        ],
+        "answer": "Specifies the media type that the method can produce"
+      },
+      {
+        "id": 16,
+        "question": "Which HTTP method is used to update a resource in REST?",
+        "options": ["GET", "POST", "PUT", "DELETE"],
+        "answer": "PUT"
+      },
+      {
+        "id": 17,
+        "question": "What is the purpose of ResponseEntity class in Spring REST?",
+        "options": [
+          "To create a response with custom status code, headers, and body",
+          "To handle exceptions in REST controllers",
+          "To validate request parameters",
+          "To authenticate REST requests"
+        ],
+        "answer": "To create a response with custom status code, headers, and body"
+      },
+      {
+        "id": 18,
+        "question": "Which of the following is a Java implementation of JAX-RS?",
+        "options": ["Jersey", "Hibernate", "Spring Data", "MyBatis"],
+        "answer": "Jersey"
+      },
+      {
+        "id": 19,
+        "question": "What does URI stand for in the context of REST?",
+        "options": [
+          "Uniform Resource Identifier",
+          "Universal Resource Identifier",
+          "Uniform Resource Interface",
+          "Universal Resource Interface"
+        ],
+        "answer": "Uniform Resource Identifier"
+      },
+      {
+        "id": 20,
+        "question": "Which annotation is used to handle exceptions in Spring REST controllers?",
+        "options": [
+          "@ExceptionHandler",
+          "@ControllerAdvice",
+          "@ErrorHandler",
+          "@RestExceptionHandler"
+        ],
+        "answer": "@ExceptionHandler"
+      }
+    ],
+    "RestApi_dotnet": [
+      {
+        "id": 1,
+        "question": "What is the primary framework for building RESTful APIs in .NET?",
+        "options": [
+          "ASP.NET Web API",
+          "WCF",
+          "ASP.NET MVC",
+          "ASP.NET Core"
+        ],
+        "answer": "ASP.NET Core"
+      },
+      {
+        "id": 2,
+        "question": "Which attribute is used to specify HTTP method in ASP.NET Core Web API?",
+        "options": [
+          "[HttpGet]",
+          "[Route]",
+          "[ApiController]",
+          "[Produces]"
+        ],
+        "answer": "[HttpGet]"
+      },
+      {
+        "id": 3,
+        "question": "What is the purpose of [FromBody] attribute in ASP.NET Core Web API?",
+        "options": [
+          "To bind request body to a parameter",
+          "To bind query string parameters",
+          "To bind route parameters",
+          "To bind form data"
+        ],
+        "answer": "To bind request body to a parameter"
+      },
+      {
+        "id": 4,
+        "question": "Which package provides the ApiController attribute in ASP.NET Core?",
+        "options": [
+          "Microsoft.AspNetCore.Mvc",
+          "Microsoft.AspNetCore.Http",
+          "Microsoft.Extensions.DependencyInjection",
+          "Microsoft.EntityFrameworkCore"
+        ],
+        "answer": "Microsoft.AspNetCore.Mvc"
+      },
+      {
+        "id": 5,
+        "question": "What is the default format for serializing data in ASP.NET Core Web API?",
+        "options": [
+          "JSON",
+          "XML",
+          "BSON",
+          "Plain Text"
+        ],
+        "answer": "JSON"
+      },
+      {
+        "id": 6,
+        "question": "Which middleware is responsible for routing in ASP.NET Core?",
+        "options": [
+          "UseRouting",
+          "UseEndpoints",
+          "UseMvc",
+          "UseControllers"
+        ],
+        "answer": "UseRouting"
+      },
+      {
+        "id": 7,
+        "question": "What is the purpose of IActionResult in ASP.NET Core Web API?",
+        "options": [
+          "To represent different HTTP status code responses",
+          "To handle exceptions",
+          "To validate models",
+          "To authenticate requests"
+        ],
+        "answer": "To represent different HTTP status code responses"
+      },
+      {
+        "id": 8,
+        "question": "Which class is used to configure services in ASP.NET Core Startup?",
+        "options": [
+          "ConfigureServices",
+          "Configure",
+          "ServiceCollection",
+          "ServiceProvider"
+        ],
+        "answer": "ConfigureServices"
+      },
+      {
+        "id": 9,
+        "question": "What is the purpose of [ApiController] attribute?",
+        "options": [
+          "Enables API-specific behaviors",
+          "Specifies the route template",
+          "Handles exceptions",
+          "Validates models"
+        ],
+        "answer": "Enables API-specific behaviors"
+      },
+      {
+        "id": 10,
+        "question": "Which HTTP status code represents a successful creation of a resource?",
+        "options": [
+          "201 Created",
+          "200 OK",
+          "204 No Content",
+          "202 Accepted"
+        ],
+        "answer": "201 Created"
+      },
+      {
+        "id": 11,
+        "question": "What is the purpose of [Route] attribute in ASP.NET Core Web API?",
+        "options": [
+          "To define the URL pattern for a controller or action",
+          "To specify the HTTP method",
+          "To validate request data",
+          "To specify the response format"
+        ],
+        "answer": "To define the URL pattern for a controller or action"
+      },
+      {
+        "id": 12,
+        "question": "Which method is used to register controllers in ASP.NET Core?",
+        "options": [
+          "AddControllers()",
+          "UseControllers()",
+          "RegisterControllers()",
+          "ConfigureControllers()"
+        ],
+        "answer": "AddControllers()"
+      },
+      {
+        "id": 13,
+        "question": "What is the purpose of ActionFilterAttribute in ASP.NET Core?",
+        "options": [
+          "To perform logic before or after an action method executes",
+          "To handle exceptions",
+          "To authenticate requests",
+          "To authorize requests"
+        ],
+        "answer": "To perform logic before or after an action method executes"
+      },
+      {
+        "id": 14,
+        "question": "Which package provides JSON serialization in ASP.NET Core?",
+        "options": [
+          "System.Text.Json",
+          "Newtonsoft.Json",
+          "Microsoft.Json",
+          "Json.NET Core"
+        ],
+        "answer": "System.Text.Json"
+      },
+      {
+        "id": 15,
+        "question": "What is the purpose of [Produces] attribute in ASP.NET Core Web API?",
+        "options": [
+          "To specify the response content type",
+          "To specify the request content type",
+          "To produce a specific model",
+          "To generate documentation"
+        ],
+        "answer": "To specify the response content type"
+      },
+      {
+        "id": 16,
+        "question": "Which HTTP method is used to update a resource in REST?",
+        "options": [
+          "PUT",
+          "POST",
+          "PATCH",
+          "DELETE"
+        ],
+        "answer": "PUT"
+      },
+      {
+        "id": 17,
+        "question": "What is the purpose of [FromQuery] attribute in ASP.NET Core Web API?",
+        "options": [
+          "To bind query string parameters",
+          "To bind request body",
+          "To bind route parameters",
+          "To bind form data"
+        ],
+        "answer": "To bind query string parameters"
+      },
+      {
+        "id": 18,
+        "question": "Which method is used to map endpoints in ASP.NET Core?",
+        "options": [
+          "MapControllers()",
+          "UseControllers()",
+          "RegisterControllers()",
+          "ConfigureControllers()"
+        ],
+        "answer": "MapControllers()"
+      },
+      {
+        "id": 19,
+        "question": "What is the purpose of CreatedAtAction method in ASP.NET Core Web API?",
+        "options": [
+          "To return 201 status code with a location header",
+          "To create a new action",
+          "To redirect to another action",
+          "To create a new controller"
+        ],
+        "answer": "To return 201 status code with a location header"
+      },
+      {
+        "id": 20,
+        "question": "Which interface is used for dependency injection in ASP.NET Core?",
+        "options": [
+          "IServiceCollection",
+          "IServiceProvider",
+          "IDependencyInjection",
+          "IServiceInjection"
+        ],
+        "answer": "IServiceCollection"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": 1,
+      "name": "RestApi"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "java",
+      "skillId": 1
+    },
+    {
+      "id": 2,
+      "name": "dotnet",
+      "skillId": 1
+    }
+  ]
+}
