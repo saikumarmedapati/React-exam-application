@@ -1,34 +1,34 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+ 
 export const Result: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { score, total } = location.state as { score: number; total: number };
   const percentage = (score / total) * 100;
   const isPassed = percentage >= 60;
-
+ 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96 text-center">
-        <h1 className="text-2xl font-bold mb-6">Exam Results</h1>
-        
-        <div className="space-y-4">
-          <div className={`text-4xl font-bold ${isPassed ? 'text-green-600' : 'text-red-600'}`}>
+    <div className="container-fluid bg-info bg-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      <div className="card shadow-sm border-0 w-25">
+        <div className="card-body p-4 text-center">
+          <h1 className="h4 mb-4 text-primary fw-bold">Exam Results</h1>
+         
+          <div className={`display-6 fw-bold mb-3 ${isPassed ? 'text-success' : 'text-danger'}`}>
             {isPassed ? 'PASSED' : 'FAILED'}
           </div>
-          
-          <div className="text-xl">
+         
+          <div className="h5 text-muted">
             Score: {score}/{total}
           </div>
-          
-          <div className="text-lg">
+         
+          <div className="h6 text-muted mb-4">
             Percentage: {percentage.toFixed(1)}%
           </div>
-
+ 
           <button
             onClick={() => navigate('/')}
-            className="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+            className="btn btn-primary w-100"
           >
             Take Another Exam
           </button>

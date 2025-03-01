@@ -1,63 +1,110 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+ 
 const skills = ['RestApi'];
-const subjects = ['java', 'dotnet'];
-
+const subjects = ['Java', 'dotnet'];
+ 
 export const ExamSelection: React.FC = () => {
   const navigate = useNavigate();
   const [skill, setSkill] = React.useState('');
   const [subject, setSubject] = React.useState('');
-
+ 
   const handleStartExam = () => {
     if (skill && subject) {
       navigate(`/exam/${skill}/${subject}`);
     }
   };
-
+ 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-6">Online Examination System</h1>
-        
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Select Skill</label>
-            <select
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-              value={skill}
-              onChange={(e) => setSkill(e.target.value)}
-            >
-              <option value="">Select a skill</option>
-              {skills.map((s) => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Select Subject</label>
-            <select
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-            >
-              <option value="">Select a subject</option>
-              {subjects.map((s) => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
-          </div>
-
-          <button
-            onClick={handleStartExam}
-            disabled={!skill || !subject}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-gray-400"
-          >
-            Start Exam
-          </button>
-        </div>
+    // <div className="container-fluid bg-info bg-gradient min-vh-100 d-flex align-items-center justify-content-center">
+    //   <div className="card shadow-sm border-0 w-50 "style={{ height: "400px" }}>
+    //     <div className="card-body p-4">
+    //       <h1 className="h4 text-center mb-4 text-primary fw-bold">Online Examination System</h1>
+         
+    //       <div className="mb-3">
+    //         <label className="form-label fw-medium text-dark">Select Skill</label>
+    //         <select
+    //           className="form-select"
+    //           value={skill}
+    //           onChange={(e) => setSkill(e.target.value)}
+    //         >
+    //           <option value="">Select a skill</option>
+    //           {skills.map((s) => (
+    //             <option key={s} value={s}>{s}</option>
+    //           ))}
+    //         </select>
+    //       </div>
+ 
+    //       <div className="mb-4">
+    //         <label className="form-label fw-medium text-dark">Select Subject</label>
+    //         <select
+    //           className="form-select"
+    //           value={subject}
+    //           onChange={(e) => setSubject(e.target.value)}
+    //         >
+    //           <option value="">Select a subject</option>
+    //           {subjects.map((s) => (
+    //             <option key={s} value={s}>{s}</option>
+    //           ))}
+    //         </select>
+    //       </div>
+ 
+    //       <button
+    //         onClick={handleStartExam}
+    //         disabled={!skill || !subject}
+    //         className="btn btn-primary w-100"
+    //       >
+    //         Start Exam
+    //       </button>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="container-fluid bg-info bg-gradient min-vh-100 d-flex align-items-center justify-content-center">
+  <div className="card shadow-lg border border-2 border-dark w-50 rounded-4" style={{ height: "400px" }}>
+    <div className="card-body p-4 d-flex flex-column justify-content-center">
+      <h1 className="h4 text-center mb-4 text-primary fw-bold">Online Examination System</h1>
+ 
+      {/* Select Skill */}
+      <div className="mb-3">
+        <label className="form-label fw-semibold text-dark">Select Skill</label>
+        <select
+          className="form-select border border-2 border-success rounded-3"
+          value={skill}
+          onChange={(e) => setSkill(e.target.value)}
+        >
+          <option value="">Select a skill</option>
+          {skills.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
       </div>
+ 
+      {/* Select Subject */}
+      <div className="mb-4">
+        <label className="form-label fw-semibold text-dark">Select Subject</label>
+        <select
+          className="form-select border border-2 border-success rounded-3"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        >
+          <option value="">Select a subject</option>
+          {subjects.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+ 
+      {/* Start Exam Button */}
+      <button
+        onClick={handleStartExam}
+        disabled={!skill || !subject}
+        className="btn btn-primary w-100 fw-bold py-2 rounded-3"
+      >
+        Start Exam
+      </button>
     </div>
+  </div>
+</div>
+ 
   );
 };
